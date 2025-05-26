@@ -1,0 +1,32 @@
+# Site settings
+title: "Prithwish Samanta"
+description: "Prithwish's personal blog site."
+author: "Prithwish Samanta"
+baseurl: "/blog"
+url: "https://prithwish-samanta.github.io"
+
+# This is used by feed.xml. Uncomment if you want to use it.
+# description: "..."
+
+gems:
+  - jemoji
+exclude:
+  - "README.md"
+  - "CHANGELOG.md"
+  - "CNAME"
+  - "Gemfile"
+  - "Gemfile.lock"
+permalink: :title
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
