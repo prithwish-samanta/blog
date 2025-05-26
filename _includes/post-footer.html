@@ -1,8 +1,43 @@
-<div data-purplecoat="shiori" data-purplecoat-label="post-footer.html">
-<h3 class="section-header">
-  Post Footer
-</h3>
-<div class="well well-sm">
-  {% include ribbon.html %} You can customize this section in <code>_includes</code> &rarr; <code>post-footer.html</code>.
-</div>
-</div>
+<link rel="stylesheet" href="../stylesheets/shiori.scss">
+<footer class="post-footer">
+    {% if page.series %}
+    <div class="series-footer-nav">
+        <h4>Continue Your AWS SAA Journey:</h4>
+        <p>Explore more notes in the **<a href="{{ site.baseurl }}/series/{{ page.series-alias }}/">{{ page.series
+            }}</a>** series.</p>
+    </div>
+    <hr>
+    {% endif %}
+
+    <div class="footer-author-info">
+        <h4>About the Author</h4>
+        <div class="media">
+            <h4 class="media-heading">Prithwish Samanta</h4>
+            <div class="media-body">
+                <img src="{{ site.baseurl }}/assets/profile-photo.jpg" alt="Prithwish Samanta" class="author-avatar">
+                <p>
+                    Hi, I'm Prithwish! I'm sharing my notes and insights as I prepare for the AWS Solutions Architect
+                    Associate certification. I believe learning is best when shared.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="social-share-buttons">
+        <h4>Share This Post</h4>
+        <button type="button"
+                onclick="location.href='https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url }}'"
+                class="btn btn-primary"><i class="fa fa-twitter"></i> Tweet
+        </button>
+        <button type="button" class="btn btn-primary"
+                onclick="location.href='https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title | url_encode }}&summary={{ page.excerpt | url_encode }}'">
+            <i class="fa fa-linkedin"></i> LinkedIn
+        </button>
+        <button type="button"
+                onclick="location.href='https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}'"
+                class="btn btn-primary"><i class="fab fa-meta"></i> Facebook
+        </button>
+    </div>
+</footer>

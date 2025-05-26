@@ -1,0 +1,95 @@
+.series-nav, .series-footer-nav {
+    background-color: #f8f8f8;
+    border-left: 4px solid #e07280;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.series-nav p, .series-footer-nav p {
+    margin-bottom: 0;
+    font-size: 1.1em;
+}
+
+.series-footer-nav h4 {
+    margin-top: 0;
+    color: #e07280;
+}
+
+.series-nav a, .series-footer-nav a {
+    font-weight: bold;
+    color: #e07280;
+    text-decoration: none;
+}
+
+.series-nav a:hover, .series-footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-author-info {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-author-info h4 {
+    margin-bottom: 15px;
+}
+
+.footer-author-info .media {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content within media */
+}
+
+.footer-author-info .author-avatar {
+    width: 80px; /* Adjust size */
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 2px solid #ddd;
+}
+
+.footer-author-info .media-body {
+    max-width: 600px; /* Limit width of text */
+    text-align: left;
+}
+
+.footer-author-info .media-heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.social-share-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-share-buttons h4 {
+    margin-bottom: 15px;
+}
+
+.post-tags {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-link {
+    display: inline-block;
+    background-color: #e07280;
+    color: #ffffff;
+    padding: 5px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tag-link:hover {
+    background-color: #c96570;
+    color: #ffffff;
+}

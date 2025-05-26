@@ -1,7 +1,27 @@
-<!-- Feel free to remove this div. Uses purplecoat: http://ellekasai.github.io/purplecoat.js -->
-<div data-purplecoat="shiori" data-purplecoat-label="post-header.html">
-<p class="text-muted">{{ page.date | date_to_string }}</p>
-<div class="well well-sm">
-  {% include ribbon.html %} You can customize this section in <code>_includes</code> &rarr; <code>post-header.html</code>.
-</div>
-</div>
+<link rel="stylesheet" href="../stylesheets/custom.css">
+<header class="post-header">
+    <p class="post-meta">
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ page.date | date: "%b %d, %Y" }}
+        </time>
+    </p>
+
+    {% if page.series %}
+    <div class="series-nav">
+        <p>This post is part of the <strong><a href="{{ site.baseurl }}/series/{{ page.series-alias }}/">{{ page.series
+            }}</a></strong> series.</p>
+    </div>
+    {% endif %}
+
+    {% if page.tags %}
+    <div class="post-tags">
+        {% for tag in page.tags %}
+        <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}/" class="tag-link">#{{ tag }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if page.excerpt %}
+    <p class="post-excerpt">{{ page.excerpt }}</p>
+    {% endif %}
+</header>
